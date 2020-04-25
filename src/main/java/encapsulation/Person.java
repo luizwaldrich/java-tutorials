@@ -16,6 +16,7 @@ public class Person {
     private String name;
     private String passportNumber;
     private LocalDate birthDay;
+    private Integer age;
 
     public String getName() {
         return name;
@@ -42,6 +43,10 @@ public class Person {
     }
 
     public Integer getAge() {
+        return age != null && age != 0 ? age : calculateAge();
+    }
+
+    private Integer calculateAge() {
         return birthDay != null ? Period.between(birthDay, LocalDate.now()).getYears() : 0;
     }
 }
