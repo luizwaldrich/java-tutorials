@@ -28,3 +28,11 @@ You can also look into [GoogleTest](src/test/java/selenium/google/GoogleTest.jav
 - `getDriver()`: a method to return an already instantiated `WebDriver`;
  
 Note: For now, [resources](src/test/resources) just contains the webDriver for Windows.
+
+### REST-API
+There's a CrudUserApi under [rest](src/main/java/rest). This User Crud is just an example of a REST API for Create, Read, Update and Delete an User. Important points of this application:
+- The [domain](src/main/java/rest/domain) package holds all the requirements of this app
+- Under [UserApi](src/main/java/rest/domain/interfaces/UserApi.java) interface, you can see how the controllers will be implemented
+- In [UserController](src/main/java/rest/controllers/UserController.java) you can see the implementation of the [UserApi](src/main/java/rest/domain/interfaces/UserApi.java) interface
+- Take a look into [UserControllerTest](src/test/java/rest/controllers/UserControllerTest.java) to see how the calls for this API are done
+- This App has customized [Exception](src/main/java/rest/infrastructure/UserException.java) which are handled by an [ExceptionHandler](src/main/java/rest/infrastructure/UserExceptionHandler.java)
