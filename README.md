@@ -24,6 +24,8 @@ The [polymorphism](src/main/java/polymorphism) package contains 3 classes and 1 
 You can also look into [PolymorphismTest](src/test/java/polymorphism/PolymorphismTest.java) to see how it works.
 
 ### Selenium WebDriver and Page Objects
+
+#### Google results
 In [selenium.google.pages](src/main/java/selenium/google/pages) package you can see two Pages of Google: The [HomePage](src/main/java/selenium/google/pages/HomePage.java) and the [ResultsPage](src/main/java/selenium/google/pages/ResultsPage.java). They are similar: 
 - implements `PageFactory.initElements` into constructor, passing driver and the class as parameters. This will map all elements listed as this class attributes;
 - they have `WebElement` attributes which represent an element in a page. Eg.: Input, Button, Link, Div, etc.
@@ -32,7 +34,12 @@ You can also look into [GoogleTest](src/test/java/selenium/google/GoogleTest.jav
 - `setup()`: annotated with `@Before`, any browser configuration, implicit waits and instantiation of `WebDriver` will happen before any `@Test` begins;
 - `cleanup()`: annotated with `@After`, it closes the `WebDriver` in the correct way after every `@Test`;
 - `getDriver()`: a method to return an already instantiated `WebDriver`;
- 
+
+#### A gold of fish quotes
+This is another selenium project, similar of Google project above. In this challenge, the main goal is retrieve author and quote from the web site [A gold of fish](https://agoldoffish.wordpress.com/criminal-minds-opening-and-closing-quotes).
+
+You can see the results in [AgoldoffishTest](src/test/java/selenium/agoldoffish/AgoldoffishTest.java) test class. If you navigate through the `getQuotesBy(String author)` you can see the logic implementation on class [AgoldoffishPage](src/main/java/selenium/agoldoffish/pages/AgoldoffishPage.java). 
+
 Note: For now, [resources](src/test/resources) just contains the webDriver for Windows.
 
 ### REST-API
