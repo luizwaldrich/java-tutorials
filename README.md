@@ -2,6 +2,12 @@
 
 ## What you will find here:
 
+### Challenges
+
+The [Challenges](src/main/java/challenges/Challenges.java) class holds some challenges that I had to do in interviews without code complete or searching on Google. 
+
+You can also look into [ChallengesTest](src/test/java/challenges/ChallengesTest.java) to see how it works.
+
 ### Encapsulation
 The [Person](src/main/java/encapsulation/Person.java) class is an example of encapsulation. The advantage of using encapsulation is to control the access to the class' attributes and methods and where the class can be manipulated.
 
